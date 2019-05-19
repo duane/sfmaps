@@ -1,5 +1,4 @@
 import * as L from 'leaflet'
-import districts from './current-supervisor-districts.json'
 
 const mapEl = document.getElementById('mapid')
 
@@ -24,5 +23,5 @@ map.addLayer(osm)
 
 L.geoJSON(districts, {
   onEachFeature: (feature, layer) =>
-    layer.bindPopup(feature.properties.supdist),
+    layer.bindPopup(feature.properties.districtna),
 }).addTo(map)
