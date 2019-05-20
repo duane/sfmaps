@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^12.0.2",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/eslint-plugin-tslint": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
@@ -13,7 +14,11 @@
     "eslint": "^5.16.0",
     "eslint-plugin-eslint-plugin": "^2.1.0",
     "eslint-plugin-jest": "^22.5.1",
+    "geojson2mvt": "^0.0.4",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.1.1",
+    "prettier": "^1.17.1",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   },
   "scripts": {
@@ -21,7 +26,15 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@types/geojson": "^7946.0.7",
     "@types/leaflet": "^1.4.4",
-    "leaflet": "^1.5.1"
+    "@types/mapbox-gl": "^0.51.6",
+    "leaflet": "^1.5.1",
+    "mapbox-gl": "^0.54.0"
+  },
+  "typings": "ts/typings",
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": false
   }
 }

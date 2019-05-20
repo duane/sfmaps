@@ -8,5 +8,6 @@
       "strictNullChecks": true,
       "resolveJsonModule": true,
       "esModuleInterop": true,
+      "typeRoots": ["./ts/typings", "./node_modules/@types"]
   }
 }

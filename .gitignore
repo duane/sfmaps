@@ -5,3 +5,5 @@
 /.vscode
 *.pyc
 /cache
+/tmp
+/yarn-error.log

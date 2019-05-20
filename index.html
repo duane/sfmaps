@@ -1,11 +1,58 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
+<meta charset='utf-8' />
+<title>Display a map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
 </head>
 <body>
-  <div id="mapid"></div>
-  <script src="./index.ts"></script>
+
+<style>
+label {
+  font-size: 20px;
+}
+
+.parcel-overlay {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 400px;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+    
+.parcel-overlay .parcel-overlay-content {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+</style>
+ 
+<div id='map'></div>
+<div class='parcel-overlay top'>
+  <div class='parcel-overlay-content'>
+  <label>Parcels:</label>
+</div>
+
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZHVhbmViIiwiYSI6ImNqdnVsYnd2NjAxenQ0Ym51OTNjM2EwZXAifQ.Jx5aceA-uoU7n54hgadc7A';
+window.map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/light-v9',
+  center: [-122.431297, 37.773972],
+  zoom: 13
+});
+</script>
+<script src="index.ts"></script>
+ 
 </body>
 </html>
