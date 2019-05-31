@@ -4,7 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/geojson": "^7946.0.7",
+    "@types/mapbox-gl": "^0.51.6",
     "@types/node": "^12.0.2",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/eslint-plugin-tslint": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
@@ -26,11 +30,11 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@types/geojson": "^7946.0.7",
-    "@types/leaflet": "^1.4.4",
-    "@types/mapbox-gl": "^0.51.6",
-    "leaflet": "^1.5.1",
-    "mapbox-gl": "^0.54.0"
+    "mapbox-gl": "^0.54.0",
+    "parcel": "^1.12.3",
+    "react": "^16.8.6",
+    "react-checkbox-tree": "^1.5.1",
+    "react-dom": "^16.8.6"
   },
   "typings": "ts/typings",
   "staticFiles": {

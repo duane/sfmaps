@@ -18,16 +18,16 @@ label {
   font-size: 20px;
 }
 
-.parcel-overlay {
+#parcel-overlay {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   position: absolute;
   width: 400px;
-  top: 0;
-  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 10px;
 }
     
-.parcel-overlay .parcel-overlay-content {
+#parcel-overlay-content {
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
@@ -37,9 +37,10 @@ label {
 </style>
  
 <div id='map'></div>
-<div class='parcel-overlay top'>
-  <div class='parcel-overlay-content'>
-  <label>Parcels:</label>
+<div id="parcel-overlay" class='parcel-overlay'>
+  <div id='parcel-overlay-content'>
+    <label>Parcels:</label>
+  </div>
 </div>
 
 
@@ -52,7 +53,7 @@ window.map = new mapboxgl.Map({
   zoom: 13
 });
 </script>
-<script src="index.ts"></script>
+<script src="index.tsx"></script>
  
 </body>
 </html>
